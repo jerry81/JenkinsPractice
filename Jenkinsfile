@@ -5,6 +5,8 @@ pipeline {
             steps {
                 sh 'npm --version'
                 sh 'ls'
+                sh 'yarn'
+                sh 'node ./index.js'
             }
         }
     }
