@@ -21,3 +21,23 @@ triggers when commit to main,
 trying PR
 
 Every jenkins build must be manually triggered with scan repository now 
+
+## notifications
+
+slack 
+post {
+    success {
+        slackSend channel: '#abc-def,
+                  color: 'good',
+                  message: 'The pipeline ${currentBuild.fullDisplayName} completed successfully'
+    }
+}
+
+email 
+post {
+    failure {
+        mail to: 'team@example.com',
+             subject: '...',
+             body: 'something wrong with'
+    }
+}
