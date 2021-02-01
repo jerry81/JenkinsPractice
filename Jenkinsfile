@@ -9,6 +9,21 @@ pipeline {
                 sh 'node ./index.js'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Tests go here'
+            }
+        }
+        stage('confirm Release') {
+            steps {
+                input 'Confirm Release to Prod'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deployment script happens now'
+            }
+        }
     }
     post {
         success {
