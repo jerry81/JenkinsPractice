@@ -20,3 +20,4 @@ docker has virtual console
 triggers when commit to main, 
 trying PR
 
+Every jenkins build must be manually triggered with scan repository now 
