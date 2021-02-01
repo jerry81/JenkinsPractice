@@ -12,3 +12,6 @@ jenkins.war installation method requires jdk 11 or 8, 13 did not work
 after webpage based installation, u are suggested to add frequently used plugins
 
 an admin user is created next
+
+has a web GUI 
+
