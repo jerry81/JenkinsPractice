@@ -15,3 +15,8 @@ an admin user is created next
 
 has a web GUI 
 
+docker has virtual console
+
+triggers when commit to main, 
+trying PR
+
