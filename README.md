@@ -69,3 +69,11 @@ VARS2="HOSTNAME=|PWD=|TERM=|SHLVL=|LANGUAGE=|_=" <-- sets string
 VARS="${VARS1}|${VARS2}" <--sets a variable to 2 strings joined with | 
 docker exec agent1 sh -c "env | egrep -v "^(${VARS})" >> /etc/environment"
   this command executes a sh command on the agent1 container that is running.  -c flag runs the command string in quotes 
+docker in docker - docker running another docker to pull and build image or run other containers
+  possible but not recommended: causes low-level technical problems 
+  can be done with docker run --priveleged -d docker:dind
+alternative - sibling docker 
+  docker container connecxts to docker daemon of host system - share daemon
+    implemented by binding volume -v /var/run/docker.sock:/var/run/docker.sock
+  commonly used in Jenkins and other CICD 
+  when your build needs to run docker commands
